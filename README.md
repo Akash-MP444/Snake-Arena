@@ -1,43 +1,64 @@
 # SNAKE ARENA
 
-- Login/Register
-- Leaderboard
-- Clear Scores / Clear All Users
-- Classic + Wrap modes
-- Difficulty settings
-- Bonus food and obstacles
+Fast-paced snake game with accounts, leaderboard tracking, multiple game modes, and mobile support.
+
+## Features
+
+- Login and register system
+- Leaderboard with saved high scores
+- Clear scores / clear all users (admin actions)
+- Classic mode and wrap mode
+- Difficulty levels
+- Bonus food and obstacle mechanics
 - Mobile-friendly touch controls
 
-This repo now includes:
-- **Web game** (frontend + backend)
-- **Desktop C source**: `Snake1.c`
+## Project Contents
 
-## Run Web game locally
+- Web game (frontend + backend)
+- Desktop C source: `Snake1.c`
+
+## Live Demo
+
+https://snake-arena1.onrender.com/
+
+Note: The demo is hosted on a free tier and may take around 20-30 seconds to wake up.
+
+## Run the Web Game Locally
+
+From the `web` folder:
 
 ```powershell
 npm install
 npm start
 ```
 
-Open: `http://localhost:3000`
+Open in browser:
+
+http://localhost:3000
 
 ## Controls
 
-- Desktop: Arrow keys / WASD
+- Desktop: Arrow keys or WASD
 - Mobile: On-screen touch buttons
-- Start: press any key or tap the game board
+- Start: Press any key or tap the game board
 
-## Run Desktop C game (terminal)
+## Run the Desktop C Version
 
-From this repo folder:
+From the repository root:
 
 ```powershell
 gcc .\Snake1.c -o .\Snake1_v3.exe
 .\Snake1_v3.exe
 ```
 
-If you use MinGW and `gcc` is not recognized, install MinGW and add it to PATH first.
+If `gcc` is not recognized, install MinGW and add it to PATH.
 
----
-👤 Author  
+## Tech Stack
+
+- Frontend: HTML, CSS, JavaScript
+- Backend: Node.js, Express
+- Storage: JSON file-based data (`data/users.json`)
+
+## Author
+
 Akash MP
