@@ -1,6 +1,4 @@
-# SNAKE ARENA (Web)
-
-Browser-based Snake Arena game with:
+# SNAKE ARENA
 
 - Login/Register
 - Leaderboard
@@ -10,7 +8,11 @@ Browser-based Snake Arena game with:
 - Bonus food and obstacles
 - Mobile-friendly touch controls
 
-## Run locally
+This repo now includes:
+- **Web game** (frontend + backend)
+- **Desktop C source**: `Snake1.c`
+
+## Run Web game locally
 
 ```powershell
 npm install
@@ -25,3 +27,17 @@ Open: `http://localhost:3000`
 - Mobile: On-screen touch buttons
 - Start: press any key or tap the game board
 
+## Run Desktop C game (terminal)
+
+From this repo folder:
+
+```powershell
+gcc .\Snake1.c -o .\Snake1_v3.exe
+.\Snake1_v3.exe
+```
+
+If you use MinGW and `gcc` is not recognized, install MinGW and add it to PATH first.
+
+---
+👤 Author  
+Akash MP
