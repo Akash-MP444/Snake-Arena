@@ -23,6 +23,15 @@ https://snake-arena1.onrender.com/
 
 Note: The demo is hosted on a free tier and may take around 20-30 seconds to wake up.
 
+---
+
+## Gameplay Preview
+
+![Snake Arena Gameplay]
+<img width="1091" height="921" alt="image" src="https://github.com/user-attachments/assets/d8f68089-1121-4b72-ac1b-9d3594837b8f" />
+
+---
+
 ## Run the Web Game Locally
 
 From the `web` folder:
