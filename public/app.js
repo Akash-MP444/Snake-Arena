@@ -1,3 +1,4 @@
+alert("APP LOADED");
 const { useEffect, useMemo, useRef, useState } = React;
 
 const GRID = 20;
