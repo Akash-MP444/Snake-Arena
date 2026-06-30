@@ -123,6 +123,16 @@ app.post("/api/leaderboard/clear-scores", async (_req, res) => {
   await writeUsers(resetUsers);
   res.json({ ok: true, cleared: resetUsers.length });
 });
+app.get("/", (req, res) => {
+  res.send(`
+    <h2>Snake Arena Backend is Running ✅</h2>
+    <p>This is the Express backend.</p>
+    <p>Start the frontend in another terminal:</p>
+    <pre>npm run dev</pre>
+    <p>Then open:</p>
+    <a href="http://localhost:5173">http://localhost:5173</a>
+  `);
+});
 
 app.listen(PORT, async () => {
   await ensureDataFile();
