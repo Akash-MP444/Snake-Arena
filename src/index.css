@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: radial-gradient(circle at 20% 10%, #1f3f65 0%, #0f172a 45%, #020617 100%);
+  color: #e5e7eb;
+}
+
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.card {
+  background: rgba(17, 24, 39, 0.75);
+  border: 1px solid rgba(96, 165, 250, 0.35);
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 16px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+h1, h2, h3 {
+  margin: 0 0 10px;
+}
+
+h1 {
+  font-size: 2rem;
+  background: linear-gradient(90deg, #22d3ee, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-center {
+  text-align: center;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.auth-row {
+  margin-bottom: 10px;
+}
+
+input, select, button {
+  padding: 9px 10px;
+  border-radius: 8px;
+  border: 1px solid #4b5563;
+  background: #111827;
+  color: #f9fafb;
+}
+
+.password-wrap {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.eye-btn {
+  min-width: 40px;
+  padding: 9px 10px;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.switch-auth {
+  display: inline-flex;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+  border-color: #60a5fa;
+}
+
+canvas {
+  background: #020617;
+  border: 2px solid #3b82f6;
+  border-radius: 10px;
+  box-shadow: 0 0 28px rgba(59, 130, 246, 0.35);
+}
+
+.error {
+  color: #fca5a5;
+}
+
+.chip {
+  padding: 7px 10px;
+  border: 1px solid #334155;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.85);
+}
+
+.game-stage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-stage canvas {
+  width: min(92vw, 440px);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  touch-action: manipulation;
+}
+
+.start-hint {
+  margin: 10px 0 0;
+  color: #bfdbfe;
+}
+
+.touch-controls {
+  text-align: center;
+}
+
+.touch-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.touch-btn {
+  min-width: 56px;
+  min-height: 56px;
+  font-size: 1.3rem;
+  border-radius: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  border-bottom: 1px solid #374151;
+  padding: 8px;
+}
+
+@media (max-width: 700px) {
+  .app {
+    padding: 12px;
+  }
+
+  .auth-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .password-wrap {
+    width: 100%;
+  }
+
+  .password-wrap input {
+    width: 100%;
+  }
+
+  .row {
+    gap: 8px;
+  }
+}
+
