@@ -1,27 +1,27 @@
-# SNAKE ARENA
+# Snake Arena
 
-Fast-paced snake game with accounts, leaderboard tracking, multiple game modes, and mobile support.
+Snake Arena is a web-based Snake game built using React, Vite, Node.js, and Express. It includes user authentication, leaderboard tracking, multiple game modes, and mobile-friendly controls.
 
 ## Features
 
-- Login and register system
-- Leaderboard with saved high scores
-- Clear scores / clear all users (admin actions)
-- Classic mode and wrap mode
-- Difficulty levels
-- Bonus food and obstacle mechanics
-- Mobile-friendly touch controls
+- User registration and login
+- Persistent leaderboard with high scores
+- Classic and Wrap game modes
+- Easy, Normal, and Hard difficulty levels
+- Bonus food and obstacles
+- Mobile touch controls
+- Pause and resume support
 
 ## Project Contents
 
-- Web game (frontend + backend)
+- Web game (React + Vite frontend, Express backend)
 - Desktop C source: `Snake1.c`
 
 ## Live Demo
 
 https://snake-arena1.onrender.com/
 
-Note: The demo is hosted on a free tier and may take around 20-30 seconds to wake up.
+> Note: The demo is hosted on Render's free tier and may take 20–30 seconds to wake up after inactivity.
 
 ---
 
@@ -32,41 +32,62 @@ Note: The demo is hosted on a free tier and may take around 20-30 seconds to wak
 
 ---
 
-## Run the Web Game Locally
+## Run the Project Locally
 
 From the `web` folder:
 
-```powershell
+```bash
 npm install
+```
+
+Start the backend:
+
+```bash
 npm start
 ```
 
-Open in browser:
+Open another terminal and start the frontend:
 
-http://localhost:3000
+```bash
+npm run dev
+```
+
+Open the application:
+
+Frontend:
+
+```
+http://localhost:5173
+```
+
+Backend Health Check:
+
+```
+http://localhost:3000/api/health
+```
 
 ## Controls
 
-- Desktop: Arrow keys or WASD
-- Mobile: On-screen touch buttons
-- Start: Press any key or tap the game board
+- Arrow Keys or WASD
+- On-screen touch controls (Mobile)
+- Press any key or tap the game board to start
 
 ## Run the Desktop C Version
 
 From the repository root:
 
-```powershell
-gcc .\Snake1.c -o .\Snake1_v3.exe
-.\Snake1_v3.exe
+```bash
+gcc Snake1.c -o Snake1.exe
+./Snake1.exe
 ```
 
-If `gcc` is not recognized, install MinGW and add it to PATH.
+If `gcc` is not recognized, install MinGW and add it to your system PATH.
 
 ## Tech Stack
 
-- Frontend: HTML, CSS, JavaScript
+- Frontend: React, Vite
 - Backend: Node.js, Express
-- Storage: JSON file-based data (`data/users.json`)
+- Storage: JSON (`data/users.json`)
 
 ## Author
 
