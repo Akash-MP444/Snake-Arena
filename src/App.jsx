@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-
+const API = "https://snake-arena1.onrender.com";
 const GRID = 20;
 const CELL = 22;
 const SCORE_PER_FOOD = 10;
@@ -156,13 +156,13 @@ function App() {
   };
 
   async function refreshLeaderboard() {
-    const res = await fetch("/api/leaderboard");
+    const res = await fetch(`${API}/api/leaderboard`);
     setLeaderboard(await res.json());
   }
 
   async function auth(endpoint) {
     setError("");
-    const res = await fetch(`/api/${endpoint}`, {
+    const res = await fetch(`${API}/api/${endpoint}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password })
@@ -180,7 +180,7 @@ function App() {
   }
 
   async function pushScore(finalScore) {
-    const res = await fetch("/api/score", {
+    const res = await fetch(`${API}/api/score`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username: user, score: finalScore })
@@ -195,7 +195,7 @@ function App() {
   async function clearLeaderboardScores() {
     const ok = window.confirm("Clear all scores but keep users?");
     if (!ok) return;
-    const res = await fetch("/api/leaderboard/clear-scores", { method: "POST" });
+    const res = await fetch(`${API}/api/leaderboard/clear-scores`, { method: "POST" });
     const data = await res.json();
     if (!res.ok || !data.ok) {
       setError("Could not clear scores.");
@@ -208,7 +208,7 @@ function App() {
   async function clearAllUsers() {
     const ok = window.confirm("Delete all users and clear leaderboard?");
     if (!ok) return;
-    const res = await fetch("/api/leaderboard/clear", { method: "POST" });
+    const res = await fetch(`${API}/api/leaderboard/clear`, { method: "POST" });
     const data = await res.json();
     if (!res.ok || !data.ok) {
       setError("Could not clear users.");
